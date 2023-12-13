@@ -36,9 +36,6 @@ class Game
         coord_one = input_array[0].to_i
         coord_two = input_array[1].to_i
 
-        # loop até o user inputar algo valido:
-        # se tiver espaço, se for entre 0 e 2
-        # e se o espaço do board tiver vazio
         until input.match(/\s/) && coord_one.between?(0, 2) && coord_two.between?(0, 2) && @board[coord_one][coord_two] == '_'
             puts 'Digite coordenadas válidas pros espaços vazios!'
             input = gets.chomp
@@ -57,7 +54,6 @@ class Game
         @@turn_count += 1
     end
 
-    # analisa a horizontal
     def three_across
         @board.each do |i|
             if i.all? { |j| j == 'X' }
@@ -72,7 +68,6 @@ class Game
         end
     end
 
-    # analisa a vertical
     def three_down
         flat = @board.flatten
 
@@ -89,7 +84,6 @@ class Game
         end
     end
 
-    # analisa a diagonal
     def three_diagonal
         center_val = @board[1][1]
 

@@ -14,5 +14,5 @@ indique a coordenada, com base nas instruções mostradas no terminal.
 
 
 ## Code Structure
-- `bin`: Contém o arquivo de execução do projeto (`main.rb`).
-- `lib`: Diretório contento a classe principal do script.
+- `/bin`: Contém o arquivo de execução do projeto (`main.rb`).
+- `/lib`: Diretório contento a classe principal do script.
